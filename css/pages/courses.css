@@ -1,0 +1,183 @@
+/* ==========================================================================
+   Khoa Hoc (courses) page
+   Layout 8
+   ========================================================================== */
+
+#courses {
+  position: absolute;
+  left: 200px;
+  right: 0;
+  top: 116px;
+  bottom: 0;
+  overflow-y: auto;
+  padding: 10px 48px 40px calc(52px + var(--dx, 0px) * 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.55) transparent;
+}
+#courses.on {
+  opacity: 1;
+  pointer-events: auto;
+}
+.lvl {
+  margin-bottom: 28px;
+}
+.lvl-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 30px;
+  border-radius: 999px;
+  background: #fff;
+  color: #111;
+  font: 400 13px var(--font);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+.lvl.lock .lvl-tag {
+  background: #808080;
+}
+.cgrid {
+  display: flex;
+  gap: 16px;
+  margin: 18px 0 0 20px;
+}
+.cc {
+  width: 129px;
+  height: 161px;
+  border: 0;
+  border-radius: 18px;
+  background: var(--stage);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 7px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  color: #111;
+  font: 400 14px/1.3 var(--font);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.cc:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25);
+}
+.cc .th {
+  height: 71px;
+  border-radius: 14px;
+  background: var(--sel);
+  flex: none;
+}
+.cc .lb {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.cc.lock {
+  background: #7b7b7b;
+}
+.cc.lock .th {
+  background: #555;
+}
+.cc.lock:hover {
+  transform: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- Vocabulary Roadmap (A1 – A2) ---------- */
+#courses.rm-mode {
+  top: 72px;
+  padding: 6px 24px 36px 28px;
+}
+.rm-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.rm-bar .lvl-tag {
+  width: auto;
+  padding: 0 18px;
+}
+.rm-wrap {
+  position: relative;
+  width: 600px;
+  margin-top: 6px;
+}
+.rm-svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+.rm-node {
+  position: absolute;
+  translate: -50% -50%;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font: 700 11.5px var(--font);
+  color: #111;
+  background: transparent;
+  padding: 0;
+  transition:
+    translate 0.2s ease,
+    scale 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.rm-node.lock {
+  width: 98px;
+  height: 98px;
+  background: #828282;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+.rm-node.lock.circle {
+  border-radius: 50%;
+}
+.rm-node.lock.square {
+  border-radius: 4px;
+}
+.rm-node.lock:hover {
+  translate: -50% -54%;
+}
+.rm-lock {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+.rm-node.open {
+  width: 98px;
+  translate: -50% -34px;
+}
+.rm-node.open:hover {
+  translate: -50% -38px;
+  scale: 1.05;
+}
+.rm-stk {
+  width: 82px;
+  height: 58px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+}
+.rm-lb {
+  line-height: 1.15;
+  text-align: center;
+  white-space: nowrap;
+}
+.rm-node.done .rm-lb::after {
+  content: ' ✓';
+  color: #1f5c35;
+}
+.rm-lessons {
+  padding-top: 6px;
+}
