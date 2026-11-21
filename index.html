@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>DeuKi Education – Onboarding</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Be+Vietnam+Pro:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles (order matters) -->
+    <link rel="stylesheet" href="css/base/variables.css" />
+    <link rel="stylesheet" href="css/base/reset.css" />
+    <link rel="stylesheet" href="css/layout/stage.css" />
+    <link rel="stylesheet" href="css/components/mascot.css" />
+    <link rel="stylesheet" href="css/components/speech-bubble.css" />
+    <link rel="stylesheet" href="css/components/answer-chips.css" />
+    <link rel="stylesheet" href="css/components/continue-button.css" />
+    <link rel="stylesheet" href="css/components/login-card.css" />
+    <link rel="stylesheet" href="css/components/mascot-toast.css" />
+    <link rel="stylesheet" href="css/pages/home.css" />
+    <link rel="stylesheet" href="css/pages/lessons.css" />
+    <link rel="stylesheet" href="css/pages/courses.css" />
+    <link rel="stylesheet" href="css/pages/progress.css" />
+    <link rel="stylesheet" href="css/utilities.css" />
+  </head>
+  <body>
+    <div id="fit">
+      <div id="stage" data-p="1">
+        <div id="mascot" class="enter">
+          <div class="m-float">
+            <div class="m-hop" id="hop">
+              <svg viewBox="0 0 465 363" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="armL" class="g">
+                  <path
+                    d="M39.4 288c19.5 8.7 48.4-13.6 64.5-49.9 16.1-36.2 13.4-72.6-6.1-81.3-19.5-8.7-48.4 13.6-64.5 49.9-16.1 36.2-13.4 72.6 6.1 81.3Z"
+                    fill="#fff"
+                  />
+                </g>
+                <g id="armR" class="g">
+                  <path
+                    d="M425.3 234.1c-10.9-38.1-36.4-64.2-57-58.3-20.5 5.9-28.3 41.5-17.4 79.6 10.9 38.1 36.4 64.2 56.9 58.3 20.5-5.9 28.3-41.5 17.5-79.6Z"
+                    fill="#fff"
+                  />
+                </g>
+                <g id="body" class="g">
+                  <path
+                    d="M243.8 15.4C182.9 11.2 130.1 57 125.9 117.9l-7.7 110.2c-4.3 60.8 41.6 113.6 102.5 117.8 60.8 4.3 113.6-41.6 117.8-102.4l7.7-110.2C350.5 72.5 304.6 19.7 243.8 15.4Z"
+                    fill="#fff"
+                  />
+                  <g id="eyeTrack">
+                    <g id="blink" class="g">
+                      <path
+                        d="M180.2 132.8c2.1-30.4 28.5-53.4 58.9-51.2 30.4 2.1 53.4 28.5 51.2 58.9-2.1 30.4-28.5 53.4-58.9 51.2-30.4-2.1-53.4-28.5-51.2-58.9Z"
+                        fill="#000"
+                      />
+                      <path
+                        d="M230.7 122.5c.5-7.6 7.1-13.3 14.7-12.8 7.6.5 13.3 7.1 12.8 14.7-.5 7.6-7.1 13.3-14.7 12.8-7.6-.5-13.3-7.1-12.8-14.7Z"
+                        fill="#FFFEFE"
+                      />
+                    </g>
+                  </g>
+                  <path
+                    id="mouth"
+                    class="g"
+                    d="M214.9 256c-5.2-.9-11.3-2.8-15.2-5.5-3.1-2.1-5-6.8-6.8-11.6-.3-1.2-.5-2.2-.7-3-.2-.9-.3-1.6-.9-3.9"
+                    stroke="#000"
+                    stroke-width="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div id="bubble">
+          <div id="bubbleIn"><span id="txt"></span></div>
+        </div>
+        <div id="chips" aria-live="polite"></div>
+        <div id="login">
+          <h2 id="lt">Login</h2>
+          <form id="lf" novalidate>
+            <div class="fld nm">
+              <label for="nm">Name</label>
+              <div class="inp">
+                <input id="nm" type="text" placeholder="John Doe" autocomplete="name" /><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#222"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="8" r="4" />
+                  <path d="M4 21c0-4 3.5-7 8-7s8 3 8 7" />
+                </svg>
+              </div>
+            </div>
+            <div class="fld">
+              <label for="em">Email</label>
+              <div class="inp">
+                <input id="em" type="email" placeholder="johndoe@email.com" autocomplete="email" /><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#222"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <path d="m3 7 9 6 9-6" />
+                </svg>
+              </div>
+            </div>
+            <div class="fld">
+              <label for="pw">Password</label>
+              <div class="inp">
+                <input
+                  id="pw"
+                  type="password"
+                  placeholder="johndoe123..."
+                  autocomplete="current-password"
+                /><svg viewBox="0 0 24 24" fill="#222" stroke="#222" stroke-width="2" stroke-linecap="round">
+                  <rect x="5" y="11" width="14" height="10" rx="2" />
+                  <path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" />
+                </svg>
+              </div>
+            </div>
+            <div class="row">
+              <label class="chk"><input type="checkbox" checked />Remember me</label
+              ><a role="button" tabindex="0">Forgot Password?</a>
+            </div>
+            <button class="btn-login" id="lb" type="button">Login</button>
+            <p class="err" id="err" role="alert">Please enter a valid email and password.</p>
+          </form>
+          <p class="reg" id="sw"></p>
+        </div>
+        <button id="next">Tiếp tục</button>
+
+        <div id="home" aria-label="Homepage">
+          <aside id="side">
+            <div class="logo">DeuKi</div>
+            <nav class="nav">
+              <span class="pill" id="navPill"></span>
+              <button class="ni on">
+                <svg viewBox="0 0 24 24">
+                  <path d="M3 11 12 3l9 8" />
+                  <path d="M5 10v10h14V10" /></svg
+                >Trang Chủ
+              </button>
+              <button class="ni">
+                <svg viewBox="0 0 24 24">
+                  <path d="M2 9l10-5 10 5-10 5z" />
+                  <path d="M6 11v5c3 2.5 9 2.5 12 0v-5" /></svg
+                >Khóa Học
+              </button>
+              <button class="ni">
+                <svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" /></svg>Tiến Trình
+              </button>
+              <button class="ni">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="9" cy="8" r="3.5" />
+                  <path d="M2.5 20c0-3.5 3-6 6.5-6s6.5 2.5 6.5 6" />
+                  <circle cx="17.5" cy="9" r="2.5" />
+                  <path d="M17 14c3 0 5 2 5 5" /></svg
+                >Bạn Bè
+              </button>
+              <button class="ni">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="3" />
+                  <path
+                    d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"
+                  /></svg
+                >Cài Đặt
+              </button>
+            </nav>
+            <div class="user"><span class="avatar"></span><span id="userName">User name</span></div>
+          </aside>
+          <label id="search" class="card rise" style="--d: 0"
+            ><svg viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="7.5" />
+              <path d="m21 21-4.5-4.5" /></svg
+            ><input type="search" placeholder="Tìm kiếm bài học" aria-label="Tìm kiếm bài học"
+          /></label>
+          <div id="topStreak" class="rise" style="--d: 1" title="Chuỗi ngày học">
+            <img class="tfire" alt="" src="assets/images/icons/fire.png" /><b id="topN">0</b>
+          </div>
+          <div id="lessons"></div>
+          <div id="courses"></div>
+          <div id="progress"></div>
+          <div id="soon" role="status">Chờ mình cập nhật nhé!</div>
+          <div id="streak" class="card rise" style="--d: 2">
+            <h3>Tiến trình của bạn</h3>
+            <div class="stbody">
+              <div class="ring">
+                <svg viewBox="0 0 100 100">
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="45"
+                    fill="none"
+                    stroke="#8EBD9D"
+                    stroke-opacity=".25"
+                    stroke-width="9"
+                  />
+                  <circle
+                    id="ringC"
+                    cx="50"
+                    cy="50"
+                    r="45"
+                    fill="none"
+                    stroke="#8EBD9D"
+                    stroke-width="9"
+                    stroke-linecap="round"
+                    pathLength="100"
+                  /></svg
+                ><img class="fire" alt="" src="assets/images/icons/fire.png" /><b id="ringT">0/20 phút</b
+                ><small>Hôm nay</small>
+              </div>
+              <p id="congrats">Học bài hôm nay để bắt đầu chuỗi ngày nhé!</p>
+            </div>
+            <div class="week">
+              <span style="--k: 0"><i></i>Mon</span><span style="--k: 1"><i></i>Tue</span
+              ><span style="--k: 2"><i></i>Wed</span><span style="--k: 3"><i></i>Thu</span
+              ><span style="--k: 4"><i></i>Fri</span><span style="--k: 5"><i></i>Sat</span
+              ><span style="--k: 6"><i></i>Sun</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts: classic deferred scripts, run in this order after the page is parsed.
+     Not ES modules, so index.html also works when opened directly from disk. -->
+    <script defer src="js/core/dom.js"></script>
+    <script defer src="js/core/state.js"></script>
+    <script defer src="js/core/stage.js"></script>
+    <script defer src="js/data/onboarding-content.js"></script>
+    <script defer src="js/data/lessons-content.js"></script>
+    <script defer src="js/services/backend.demo.js"></script>
+    <script defer src="js/features/typing.js"></script>
+    <script defer src="js/features/answer-chips.js"></script>
+    <script defer src="js/features/mascot.js"></script>
+    <script defer src="js/features/streak.js"></script>
+    <script defer src="js/features/lessons.js"></script>
+    <script defer src="js/features/levels.js"></script>
+    <script defer src="js/features/courses.js"></script>
+    <script defer src="js/features/progress.js"></script>
+    <script defer src="js/features/navigation.js"></script>
+    <script defer src="js/features/auth.js"></script>
+    <script defer src="js/features/onboarding.js"></script>
+    <script defer src="js/main.js"></script>
+  </body>
+</html>
