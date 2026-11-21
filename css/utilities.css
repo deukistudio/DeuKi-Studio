@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Utilities & accessibility
+   Loaded last on purpose
+   ========================================================================== */
+
+.away {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(12px) !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01s !important;
+    transition-duration: 0.01s !important;
+    animation-iteration-count: 1 !important;
+  }
+}
