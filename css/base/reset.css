@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Reset & document
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background: var(--stage);
+  font-family: var(--font);
+  font-weight: 400;
+  font-synthesis: none;
+  overflow: hidden;
+}

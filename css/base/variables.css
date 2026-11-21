@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Design tokens
+   Colours, font stack and safe-area padding
+   ========================================================================== */
+
+:root {
+  --page: #2f2b2b;
+  --stage: #fffbe7;
+  --ink: #111;
+  --green: #8ebd9d;
+  --green-l: #eef6f0;
+  --sel: #ffe58a;
+  --font: 'Momo Trust Display', 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --page: #1b1919;
+  }
+}
