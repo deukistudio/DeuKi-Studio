@@ -1,0 +1,20 @@
+/* ==========================================================================
+   Stage
+   The fixed 960x620 canvas, scaled to the window by js/core/stage.js
+   ========================================================================== */
+
+#fit {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+#stage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1120px;
+  height: 720px;
+  background: var(--stage);
+  overflow: hidden;
+  transform-origin: 0 0;
+}
