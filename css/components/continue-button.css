@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Continue button
+   ========================================================================== */
+
+/* ---------- Continue button ---------- */
+#next {
+  position: absolute;
+  right: 60px;
+  bottom: 48px;
+  width: 176px;
+  height: 54px;
+  border-radius: 999px;
+  background: #fff;
+  border: 2.5px solid var(--green);
+  font: 400 17px var(--font);
+  color: var(--ink);
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  transform: translateY(14px);
+  pointer-events: none;
+  transition:
+    opacity 0.4s,
+    transform 0.4s cubic-bezier(0.3, 1.5, 0.5, 1),
+    background 0.2s;
+}
+#next.show {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+#next.show:hover {
+  background: var(--green-l);
+  transform: translateY(-2px);
+}
+#next.dim {
+  opacity: 0.45;
+  pointer-events: none;
+}

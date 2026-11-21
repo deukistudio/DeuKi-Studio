@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Mascot toast
+   "Coming soon" bubble the mascot says on the homepage
+   ========================================================================== */
+
+/* "coming soon" speech bubble from the mascot */
+#soon {
+  position: absolute;
+  right: 215px;
+  bottom: 77px;
+  padding: 14px 22px;
+  background: var(--stage);
+  color: #111;
+  border-radius: 20px;
+  font-size: 15px;
+  white-space: nowrap;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  transform: translateX(18px) scale(0.9);
+  transform-origin: 100% 60%;
+  pointer-events: none;
+  transition:
+    opacity 0.35s ease,
+    transform 0.45s cubic-bezier(0.3, 1.5, 0.5, 1);
+}
+#soon.show {
+  opacity: 1;
+  transform: none;
+}
+#soon::after {
+  content: '';
+  position: absolute;
+  right: -7px;
+  top: 50%;
+  margin-top: -9px;
+  width: 18px;
+  height: 18px;
+  background: var(--stage);
+  border-radius: 4px;
+  transform: rotate(45deg);
+}
+#soon.top {
+  bottom: auto;
+  top: 57px;
+  right: 160px;
+}

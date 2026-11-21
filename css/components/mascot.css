@@ -1,0 +1,193 @@
+/* ==========================================================================
+   Mascot (Alin)
+   Animated SVG character + its position on every layout (data-p)
+   ========================================================================== */
+
+/* ---------- Mascot ---------- */
+#mascot {
+  position: absolute;
+  left: calc(110px + var(--drag-x, 0px));
+  top: calc(225px + var(--drag-y, 0px));
+  width: 210px;
+  transform-origin: 50% 50%;
+  transition:
+    transform 0.9s cubic-bezier(0.34, 1.25, 0.5, 1),
+    left 0.5s cubic-bezier(0.34, 1.25, 0.5, 1),
+    top 0.5s cubic-bezier(0.34, 1.25, 0.5, 1);
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+}
+#mascot.dragging {
+  cursor: grabbing;
+  transition: transform 0.9s cubic-bezier(0.34, 1.25, 0.5, 1);
+}
+.m-float {
+  animation: float 3.6s ease-in-out infinite;
+}
+.m-hop {
+  rotate: var(--lean, 0deg);
+  transition: rotate 0.5s ease-out;
+}
+.m-hop.go {
+  animation: hop 0.75s cubic-bezier(0.3, 1.4, 0.5, 1);
+}
+#mascot svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+#body > path:first-child,
+#armL path,
+#armR path {
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.15));
+}
+#mascot .g {
+  transform-box: fill-box;
+}
+#body {
+  transform-origin: 50% 100%;
+  scale: 1 1.02;
+  animation: breathe 3.6s ease-in-out infinite;
+}
+#armL {
+  translate: -32px 0;
+  transform-origin: 85% 15%;
+  animation: wagL 3.6s ease-in-out infinite;
+}
+#armR {
+  translate: 32px 0;
+  transform-origin: 15% 15%;
+  animation: wagR 3.6s ease-in-out infinite 0.4s;
+}
+#eyeTrack {
+  transition: transform 0.15s ease-out;
+}
+#blink {
+  transform-origin: 50% 50%;
+}
+#mouth {
+  transform-origin: 50% 50%;
+}
+#mascot.talking #mouth {
+  animation: talk 0.22s ease-in-out infinite;
+}
+#mascot.talking #armR {
+  animation: wave 0.5s ease-in-out infinite;
+}
+#mascot.flying #armL {
+  animation: flapL 0.32s ease-in-out infinite;
+}
+#mascot.flying #armR {
+  animation: flapR 0.32s ease-in-out infinite;
+}
+#mascot.enter {
+  animation: enter 1s 0.9s cubic-bezier(0.3, 1.5, 0.5, 1) backwards;
+}
+@keyframes float {
+  50% {
+    transform: translateY(-12px);
+  }
+}
+@keyframes breathe {
+  50% {
+    transform: scale(1.02, 0.985);
+  }
+}
+@keyframes wagL {
+  50% {
+    transform: rotate(-7deg);
+  }
+}
+@keyframes wagR {
+  50% {
+    transform: rotate(7deg);
+  }
+}
+@keyframes wave {
+  50% {
+    transform: rotate(-22deg);
+  }
+}
+@keyframes flapL {
+  50% {
+    transform: rotate(-32deg);
+  }
+}
+@keyframes flapR {
+  50% {
+    transform: rotate(32deg);
+  }
+}
+@keyframes talk {
+  50% {
+    transform: scale(1.25, 1.6);
+  }
+}
+@keyframes hop {
+  0% {
+    transform: translateY(0) scale(1, 1);
+  }
+  25% {
+    transform: translateY(6px) scale(1.06, 0.92);
+  }
+  55% {
+    transform: translateY(-34px) scale(0.95, 1.06);
+  }
+  80% {
+    transform: translateY(0) scale(1.04, 0.96);
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes enter {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Layouts (data-p): 1/2 = left, 3 = centred, 4 = top. --tx / --bl are set by JS so the mascot+bubble group stays centred */
+#stage[data-p='1'] #mascot,
+#stage[data-p='2'] #mascot {
+  transform: translate(calc(80px + var(--dx, 0px) * 0.5), calc(50px + var(--dy, 0px) * 0.5));
+}
+#stage[data-p='3'] #mascot {
+  transform: translate(
+      calc(var(--tx, -39px) + 80px + var(--dx, 0px) * 0.5),
+      calc(53px + var(--dy, 0px) * 0.5)
+    )
+    scale(1.1);
+}
+#stage[data-p='4'] #mascot {
+  transform: translate(
+      calc(var(--tx, -15px) + 80px + var(--dx, 0px) * 0.5),
+      calc(-127px + var(--dy, 0px) * 0.5)
+    )
+    scale(0.952);
+}
+#stage[data-p='6'] #mascot {
+  transform: translate(calc(158px + var(--dx, 0px) * 0.5), calc(55px + var(--dy, 0px) * 0.5)) scale(1.25);
+}
+#stage[data-p='7'] #mascot {
+  transform: translate(calc(760px + var(--dx, 0px) * 0.75), calc(290px + var(--dy, 0px) * 0.8)) scale(0.84);
+} /* homepage: bottom-right */
+
+#stage[data-p='8'] #mascot {
+  transform: translate(calc(790px + var(--dx, 0px) * 0.75), -218px) scale(0.47);
+} /* Khoa Hoc: small, top-right */
+
+#stage[data-p='9'] #mascot {
+  transform: translate(calc(450px + var(--dx, 0px) * 0.5), calc(-166px + var(--dy, 0px) * 0.25)) scale(0.85);
+  cursor: pointer;
+} /* Tien Trinh: centred in the yellow banner (not draggable) */
+
+#mascot {
+  z-index: 5;
+}
